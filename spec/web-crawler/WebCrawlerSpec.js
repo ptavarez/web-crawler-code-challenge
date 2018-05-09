@@ -4,8 +4,33 @@ describe('Web Crawler', function () {
   const internetTwo = require('../../lib/internet/internetTwo')
   const webCrawler = require('../../web-crawler.js')
   
-  it('Should output correct links for success, skipped, and error.',
+  it('Success Output for Internet 1',
   function () {
-    webCrawler(internetOne)
+    expect(webCrawler(internetOne.pages)[0]).toEqual(internetOne.succeed)
+  })
+  
+  it('Skipped Output for Internet 1',
+  function () {
+    expect(webCrawler(internetOne.pages)[1]).toEqual(internetOne.skip)
+  })
+  
+  it('Error Output for Internet 1',
+  function () {
+    expect(webCrawler(internetOne.pages)[2]).toEqual(internetOne.fail)
+  })
+  
+  it('Success Output for Internet 2',
+  function () {
+    expect(webCrawler(internetTwo.pages)[0]).toEqual(internetTwo.succeed)
+  })
+  
+  it('Skipped Output for Internet 2',
+  function () {
+    expect(webCrawler(internetTwo.pages)[1]).toEqual(internetTwo.skip)
+  })
+  
+  it('Error Output for Internet 2',
+  function () {
+    expect(webCrawler(internetTwo.pages)[2]).toEqual(internetTwo.fail)
   })
 })
