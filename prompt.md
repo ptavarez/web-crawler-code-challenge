@@ -1,6 +1,8 @@
 # Project: Web Crawler
+
 For the purposes of this project, we define the Internet as the test data in this document, and a web crawler as software that requests pages from the Internet, parses the content to extract all the links in the page, and visits the links to crawl those pages, to an infinite depth.
 ## Project Guidelines:
+
 1. We do not expect candidates to spend more than 4 hours on this project.
 2. Use any language you want.
 3. Use any frameworks you want.
@@ -53,7 +55,7 @@ For the purposes of this project, we define the Internet as the test data in thi
 ```
 Success: ["http://foo.bar.com/p1", "http://foo.bar.com/p2", "http://foo.bar.com/p4", "http://foo.bar.com/p5", "http://foo.bar.com/p6"]
 
-Skipped: ["http://foo.bar.com/p2", "http://foo.bar.com/p4","http://foo.bar.com/p1", "http://foo.bar.com/p5"]
+Skipped: ["http://foo.bar.com/p2", "http://foo.bar.com/p1", "http://foo.bar.com/p4", "http://foo.bar.com/p5"]
 
 Error: ["http://foo.bar.com/p3", "http://foo.bar.com/p7"]
 ```
