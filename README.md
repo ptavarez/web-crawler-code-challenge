@@ -39,3 +39,5 @@ I was able to successfully complete the code challenge! According to the unit te
 
 ### Test Code
 To test my solution, fork and clone this repository and run ```npm install``` in your terminal. Once all dependencies are installed, run ```jasmine``` to run the test. You should see ```6 specs, 0 failures``` outputted in your terminal!
+
+(Note you may need to run ```npm install -g jasmine``` to run command)
