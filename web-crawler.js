@@ -1,46 +1,20 @@
-const pages = [
-  {
-    "address":"http://foo.bar.com/p1",
-    "links": ["http://foo.bar.com/p2", "http://foo.bar.com/p3", "http://foo.bar.com/p4"]
-  },
-  {
-    "address":"http://foo.bar.com/p2",
-    "links": ["http://foo.bar.com/p2", "http://foo.bar.com/p4"]
-  },
-  {
-    "address":"http://foo.bar.com/p4",
-    "links": ["http://foo.bar.com/p5", "http://foo.bar.com/p1", "http://foo.bar.com/p6"]
-  },
-  {
-    "address":"http://foo.bar.com/p5",
-    "links": []
-  },
-  {
-    "address":"http://foo.bar.com/p6",
-    "links": ["http://foo.bar.com/p7", "http://foo.bar.com/p4", "http://foo.bar.com/p5"]
-  }
-]
+Array.prototype.diff = function(a) {
+  return this.filter(function(i) {return a.indexOf(i) < 0})
+}
 
-let success = []
-let skipped = []
-let error = []
-
-const webCrawler = function () {
-  Array.prototype.diff = function(a) {
-    return this.filter(function(i) {return a.indexOf(i) < 0})
-  }
-  
-  function unique(value, index, self) {
+const unique = function (value, index, self) {
       return self.indexOf(value) === index;
-  }
+}
+
+const webCrawler = function (internet) {
   
   let addressArr = []
   let linksArr = []
   let skippedDup = []
   
-  for (let i = 0; i < pages.length; i++) {
-    let address = pages[i].address
-    let links = pages[i].links
+  for (let i = 0; i < internet.length; i++) {
+    let address = internet[i].address
+    let links = internet[i].links
     
     addressArr.push(address)
     
@@ -59,5 +33,7 @@ const webCrawler = function () {
     
     skipped = skippedDup.filter(unique)
   }
-  
+  return [success, skipped, error]
 }
+
+module.exports = webCrawler
