@@ -94,7 +94,7 @@ Error: ["http://foo.bar.com/p3", "http://foo.bar.com/p7"]
 ### Expected output:
 
 ```
-Success: ["http://foo.bar.com/p1", "http://foo.bar.com/p2", "http://foo.bar.com/p3", "http://foo.bar.com/p4". "http://foo.bar.com/p5"]
+Success: ["http://foo.bar.com/p1", "http://foo.bar.com/p2", "http://foo.bar.com/p3", "http://foo.bar.com/p4", "http://foo.bar.com/p5"]
 
 Skipped: ["http://foo.bar.com/p1"]
 
