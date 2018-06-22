@@ -38,6 +38,6 @@ I compared the arrays that are returned from the webCrawler function with the ex
 I was able to successfully complete the code challenge! According to the unit test, I was able to create a function that outputs the expected arrays for success, skipped, and error.
 
 ### Test Code
-To test my solution, fork and clone this repository and run ```npm install``` in your terminal. Once all dependencies are installed, run ```jasmine``` to run the test. You should see ```6 specs, 0 failures``` outputted in your terminal!
+To test my solution, fork and clone this repository and run ```npm install``` in your terminal. Once all dependencies are installed, run ```jasmine``` to run the test. You should see ```3 specs, 0 failures``` outputted in your terminal with the expected outputs. Note that the test only runs through Internet 1. To test for internet 2, refer to the comment in the `spec/web-crawler/WebCrawlerSpec.js` file. 
 
 (Note you may need to run ```npm install -g jasmine``` to run command)
