@@ -1,36 +1,30 @@
-describe('Web Crawler', function () {
+describe('Web Crawler for internet one', function () {
   
-  const internetOne = require('../../lib/internet/internetOne')
-  const internetTwo = require('../../lib/internet/internetTwo')
-  const webCrawler = require('../../web-crawler.js')
+  // To test between internet one and two, change the required route for the
+  // internet variable to end with '/internetTwo'
   
-  it('Success Output for Internet 1',
+  const internet = require('../../lib/internet/internetOne')
+  const crawl = require('../../web-crawler.js')
+  
+  const startPage = internet.pages[0].address
+  
+  crawl.webCrawler(startPage, internet.pages)
+  
+  it('Success Output for the Internet',
   function () {
-    expect(webCrawler(internetOne.pages)[0]).toEqual(internetOne.succeed)
+    expect(crawl.succeed).toEqual(internet.succeed)
+    console.log('Succeed =', crawl.succeed)
   })
   
-  it('Skipped Output for Internet 1',
+  it('Skipped Output for the Internet',
   function () {
-    expect(webCrawler(internetOne.pages)[1]).toEqual(internetOne.skip)
+    expect(crawl.skip).toEqual(internet.skip)
+    console.log('Skip =', crawl.skip)
   })
   
-  it('Error Output for Internet 1',
+  it('Error Output for the Internet',
   function () {
-    expect(webCrawler(internetOne.pages)[2]).toEqual(internetOne.fail)
-  })
-  
-  it('Success Output for Internet 2',
-  function () {
-    expect(webCrawler(internetTwo.pages)[0]).toEqual(internetTwo.succeed)
-  })
-  
-  it('Skipped Output for Internet 2',
-  function () {
-    expect(webCrawler(internetTwo.pages)[1]).toEqual(internetTwo.skip)
-  })
-  
-  it('Error Output for Internet 2',
-  function () {
-    expect(webCrawler(internetTwo.pages)[2]).toEqual(internetTwo.fail)
+    expect(crawl.error).toEqual(internet.fail)
+    console.log('Error =', crawl.error)
   })
 })
