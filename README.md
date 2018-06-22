@@ -35,9 +35,9 @@ The webCrawler function is called back in the unit test and is given two paramet
 I compared the arrays that are returned from the webCrawler function with the expected outputs given by GE. In the lib folder, there are two different files which have the test data for Internet 1 and Internet 2 with their expected outputs. The test itself has 6 specs, each checking to see if the arrays from the function equal the expected arrays.
 
 ## Conslusion
-I was able to successfully complete the code challenge! According to the unit test, I was able to create a function that outputs the expected arrays for success, skipped, and error.
+I was able to successfully complete the code challenge. According to the unit test, I was able to create a function that outputs the expected arrays for success, skipped, and error. View my code [here](web-crawler.js)!
 
 ### Test Code
-To test my solution, fork and clone this repository and run ```npm install``` in your terminal. Once all dependencies are installed, run ```jasmine``` to run the test. You should see ```3 specs, 0 failures``` outputted in your terminal with the expected outputs. Note that the test only runs through Internet 1. To test for internet 2, refer to the comment in the `spec/web-crawler/WebCrawlerSpec.js` file. 
+To test my solution, fork and clone this repository and run ```npm install``` in your terminal. Once all dependencies are installed, run ```jasmine``` to run the test. You should see ```3 specs, 0 failures``` outputted in your terminal with the expected outputs. Note that the test only runs through Internet 1. To test for internet 2, refer to the comment in the `spec/web-crawler/WebCrawlerSpec.js` file.
 
 (Note you may need to run ```npm install -g jasmine``` to run command)
