@@ -1,7 +1,3 @@
-const internet = require('./lib/internet/internetOne')
-
-const pageOne = internet.pages[0].address
-
 let succeed = []
 let skip = []
 let error = []
