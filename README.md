@@ -1,5 +1,5 @@
-# GE Digital Code Challenge
-GE sent over a code challenge where they defined the Internet as test data (Internet 1 and Internet 2), and a web crawler as software that requests pages from the Internet, parses the content to extract all the links in the page, and visits the links to crawl those pages.
+# Web Crawler Code Challenge
+A code challenge where the Internet is defined as test data (Internet 1 and Internet 2), and a web crawler as software that requests pages from the Internet, parses the content to extract all the links in the page, and visits the links to crawl those pages.
 
 ## Goal
 
