@@ -12,7 +12,7 @@ Success: ["http://foo.bar.com/p1", "http://foo.bar.com/p2", "http://foo.bar.com/
 
 Skipped: ["http://foo.bar.com/p2", "http://foo.bar.com/p1", "http://foo.bar.com/p4", "http://foo.bar.com/p5"]
 
-Error: ["http://foo.bar.com/p3", "http://foo.bar.com/p7"]
+Error: ["http://foo.bar.com/p7", "http://foo.bar.com/p3"]
 ```
 
 Internet 2:
